@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px; // перенести
+
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-size: $fontSizeMain + px;
+  line-height: calc(18 / $fontSizeMain);
+
+  color: $dark_shade_75;
+  border: 1px solid $dark_shade_25;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.input::placeholder {
+  color: $dark_shade_50;
+}

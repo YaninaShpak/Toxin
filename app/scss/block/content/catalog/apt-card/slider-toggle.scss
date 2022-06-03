@@ -1,0 +1,29 @@
+.slider-toggle {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  
+}
+
+.slider-toggle__list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 41.25px;
+}
+
+.slider-toggle__link {
+  display: inline-block;
+
+  width: 7.5px;
+  height: 7.49px;
+  
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+
+  &--current {
+    background-color: #FFFFFF;
+  }
+}

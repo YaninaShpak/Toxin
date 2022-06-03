@@ -1,0 +1,11 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-list__link {
+  &:hover {
+    opacity: 0.5;
+  }
+}

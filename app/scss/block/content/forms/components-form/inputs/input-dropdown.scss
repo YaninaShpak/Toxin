@@ -1,0 +1,32 @@
+.input-dropdown__wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-dropdown {
+  padding-right: 44px;
+}
+
+.input-dropdown__wrapper .input-dropdown__icons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 42px;
+  height: 42px;
+  
+  color: $dark_shade_50;
+
+  cursor: pointer;
+}
+

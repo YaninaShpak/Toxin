@@ -1,0 +1,40 @@
+.toggle__text {
+  display: flex;
+  align-items: center;
+}
+
+.toggle__indicator {
+  position: relative;
+
+  margin-right: 10px;
+  width: 40px;
+  height: 20px;
+
+  background: #FFFFFF;
+  border: 1px solid $dark_shade_25;
+  border-radius: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    left: 4px;
+
+    width: 12px;
+    height: 12px;
+    
+    background: $dark_shade_25;
+    border-radius: 10px;
+  }
+}
+
+.toggle input:checked+.toggle__indicator {
+  border-color: $purple;
+
+    &::after {
+      left: auto;
+      right: 4px;
+
+      background: $purple;
+    }
+}

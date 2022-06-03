@@ -1,0 +1,12 @@
+.main-footer {
+  font-family: $fontFamily;
+  font-size: $fontSizeMain + px;
+  font-weight: 400;
+  line-height: calc(24 / $fontSizeMain);
+  color: $dark_shade_75;
+}
+
+.main-footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}

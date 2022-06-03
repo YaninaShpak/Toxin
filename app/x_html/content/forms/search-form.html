@@ -1,0 +1,45 @@
+<section class="search-apt form">
+  <h2 class="main-title search-apt__title">Найдём номера под ваши пожелания</h2>
+  <div class="search-apt__wrapper">
+    <form class="form-search search-apt__form" action="" method="get">
+      <div class="form-search__wrapper">
+        <div class="form-date form-search__date">
+          <label class="subtitle" for="date-in">
+            Прибытие
+          </label>
+          <div class="input-dropdown__wrapper">
+            <input class="input input-dropdown" type="text" name="date-in" id="date-in" placeholder="ДД.ММ.ГГГГ">
+            <span class="material-icons input-dropdown__icons button-dropdown--calendar">expand_more</span>
+          </div>
+        </div>
+        <div class="form-date form-search__date">
+          <label class="subtitle" for="date-out">
+            Выезд
+          </label>
+          <div class="input-dropdown__wrapper">
+            <input class="input input-dropdown" type="text" name="date-out" id="date-out" placeholder="ДД.ММ.ГГГГ">
+            <span class="material-icons input-dropdown__icons button-dropdown--calendar">expand_more</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-amount form-search__item guests">
+        <label class="subtitle" for="guests">
+          Гости
+        </label>
+        <div class="input-dropdown__wrapper input-guests">
+          <input class="input" type="text" name="guests" id="guests"  value="" placeholder="Сколько гостей">
+          <span class="material-icons input-dropdown__icons button-dropdown--counter">expand_more</span>
+        </div>
+        
+        @@include('../components/counter.html', {"class": "input-guests__list"})
+      </div>
+      <a class="button button-form form-search__button" href="appartments-catalog.html">
+        Подобрать номер
+        <span class="material-icons button-form__icon">arrow_forward</span>
+      </a>
+    </form>
+  </div>
+  @@include('../components/calendar.html', {
+    class: "search-apt__calendar"
+  })
+</section>

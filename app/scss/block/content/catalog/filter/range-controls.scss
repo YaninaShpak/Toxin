@@ -1,0 +1,105 @@
+.range-controls {
+  position: relative;
+
+  width: 100%;
+  height: 6px;
+  
+}
+
+input[type='range'] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  margin: auto;
+
+  appearance: none;
+  pointer-events: none;
+  outline: none;
+  
+  background-color: transparent;
+}
+
+.range-controls__track {
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  width: 100%;
+  height: 6px;
+
+  margin: auto;
+
+  background: #fff;
+  border: 1px solid $dark_shade_25;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.range-controls__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 6px;
+  
+  margin: auto;
+  
+  border-radius: 3px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  appearance: none;
+}
+
+input[type='range']::-moz-range-track {
+  height: 6px;
+  appearance: none;
+}
+
+input[type='range']::-ms-track {
+  height: 6px;
+  appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  margin-top: -4px;
+
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+
+  appearance: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+
+  appearance: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+input[type='range']::-ms-thumb {
+  width: 12px;
+  height: 12px;
+
+  background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+
+  appearance: none;
+  pointer-events: auto;
+  cursor: pointer;
+}

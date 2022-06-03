@@ -1,0 +1,67 @@
+<section class="signin form">
+  <h2 class="main-title signin__title">Регистрация аккаунта</h2>
+  <form class="form-signin signin__form" action="" method="get">
+    <p class="form-text signin__item">
+      <label class="subtitle">
+        <span class="visually-hidden">Имя</span>
+        <input class="input" type="text" name="name" placeholder="Имя">
+      </label>
+    </p>
+    <p class="form-text signin__item">
+      <label class="subtitle">
+        <span class="visually-hidden">Фамилия</span>
+        <input class="input" type="text" name="surname" placeholder="Фамилия">
+      </label>
+    </p>
+    <div class="signin__radio">
+      <label class="radio-button signin__radio-button">
+        <input class="visually-hidden" type="radio" name="gender" checked>
+        <span class="radio-button__indicator"></span>
+        Мужчина
+      </label>
+      <label class="radio-button signin__radio-button">
+        <input class="visually-hidden" type="radio" name="gender">
+        <span class="radio-button__indicator"></span>
+        Женщина
+      </label>
+    </div>
+    <p class="form-date signin__item signin__date">
+      <label class="subtitle">
+        Дата рождения
+        <input class="input" type="text" name="birthdate" placeholder="ДД.ММ.ГГГГ">
+      </label>
+    </p>
+    <div class="signin__item">
+      <h3 class="subtitle">
+        Данные для входа в сервис
+      </h3>
+      <p class="form-text signin__item">
+        <label class="subtitle">
+          <span class="visually-hidden">Email</span>
+          <input class="input" type="text" name="email" placeholder="Email">
+        </label>
+      </p>
+      <p class="form-text signin__item">
+        <label class="subtitle">
+          <span class="visually-hidden">Пароль</span>
+          <input class="input" type="text" name="password" placeholder="Пароль">
+        </label>
+      </p>
+    </div>
+    <p class="form-signin__toggle toggle">
+      <label class="toggle__text"">
+        <input class="visually-hidden" type="checkbox" name="offers-on" id="signin-toggle" checked>
+        <span class="toggle__indicator"></span>
+        Получать спецпредложения
+      </label>
+    </p>
+    <button class="button button-form signin__button" type="submit">
+      Зарегистрироваться
+      <span class="material-icons button-form__icon">arrow_forward</span>
+    </button>
+  </form>
+  <div class="form-back">
+    <p class="form-back__text">Уже есть аккаунт на Toxin</p>
+    <a class="button button-border form-back__button" href="../../../login.html">Войти</a>
+  </div>
+</section>

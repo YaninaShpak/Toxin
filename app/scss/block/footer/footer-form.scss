@@ -1,0 +1,9 @@
+.footer-form {
+  @media (max-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.footer-form__text {
+  margin-bottom: 20px;
+}

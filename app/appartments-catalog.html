@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбрать номер в отеле Toxin</title>
+  @@include('x_html/head-link.html')
+</head>
+<body>
+  <div class="wrapper">
+    @@include('x_html/header.html')
+    <main class="catalog-content">
+      <div class="container catalog-content__wrapper">
+        <section class="filter">
+          <form class="form-filter filter__form" action="" method="get">
+            <fieldset class="form-filter__item basic-info">
+              <legend class="visually-hidden">основная информация</legend>
+              <div class="basic-info__item basic-info__item--calendar">
+                <label class="subtitle">
+                  даты пребывания в отеле
+                  <div class="input-dropdown__wrapper">
+                    <input class="input input-dropdown" type="text" name="arrival-date" placeholder="19 августа - 23 августа">
+                    <span class="material-icons input-dropdown__icons button-dropdown--calendar">expand_more</span>
+                  </div>
+                  
+                </label>
+                @@include('x_html/content/components/calendar.html', {
+                  class: "basic-info__calendar"
+                })
+              </div>
+              <div class="form-amount basic-info__item guests">
+                <label class="subtitle">
+                  Гости
+                  <div class="input-dropdown__wrapper">
+                    <input class="input" type="text" name="guests" id="guests" placeholder="3 гостя, 1 младенец">
+                    <span class="material-icons input-dropdown__icons button-dropdown--counter">expand_more</span>
+                  </div>
+                </label>
+                @@include('x_html/content/components/counter.html', {"class": "input-guests__list"})
+              </div>
+            </fieldset>
+            <fieldset class="range-slider form-filter__item">
+              <div class="range-slider__wrapper">
+                <legend class="subtitle">
+                  диапазон цены
+                </legend>
+                <div class="range-slider__price subtitle">
+                  <span id="range1">
+                    0
+                  </span>
+                  <span>₽</span>
+                  <span>&dash;</span>
+                  <span id="range2">
+                    15000
+                  </span>
+                  <span>₽</span>
+                </div>
+              </div>
+              <div class="range-slider__bar range-controls">
+                <div class="range-controls__track">
+                  <div class="range-controls__bar"></div>
+                </div>
+                <input type="range" min="0" max="15000" value="5000" id="slider-1" oninput="slideOne()">
+                <input type="range" min="0" max="15000" value="10000" id="slider-2" oninput="slideTwo()">
+              </div>
+              <p class="range-slider__info">Стоимость за сутки пребывания в номере</p>
+            </fieldset>
+            <fieldset class="form-filter__item">
+              <legend class="subtitle form-filter__title">правила дома</legend>
+              <div class="checkbox">
+                <ul class="checkbox__list list-reset">
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="smoking">
+                      <span class="checkbox-button__indicator"></span>
+                      Можно курить
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="pets" checked>
+                      <span class="checkbox-button__indicator"></span>
+                      Можно с питомцами
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="invite" checked>
+                      <span class="checkbox-button__indicator"></span>
+                      Можно пригласить гостей (до 10 человек)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="form-filter__item">
+              <legend class="subtitle form-filter__title">доступность</legend>
+              <div class="checkbox">
+                <ul class="checkbox__list list-reset">
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="smoking">
+                      <span class="checkbox-button__indicator"></span>
+                      <p class="checkbox__text">
+                        <span class="checkbox__title">Широкий коридор</span>
+                        Ширина коридоров в номере не менее 91 см.</p>
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="pets">
+                      <span class="checkbox-button__indicator"></span>
+                      <p class="checkbox__text">
+                        <span class="checkbox__title">Помощник для инвалидов</span>
+                        На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="form-filter__item filter-comfort">
+              <label class="subtitle">
+                удобства номера
+                <div class="input-dropdown__wrapper">
+                  <input class="input input-dropdown" type="text" name="amenities" id="comfort" placeholder="2 спальни, 2 кровати...">
+                  <span class="material-icons input-dropdown__icons button-dropdown--counter">expand_more</span>
+                </div>
+              </label>
+              <div class="filter-comfort__counter counter hidden">
+                <div class="counter__table">
+                  <div class="counter__row">
+                    <div class="counter__column counter__column--title">спальни</div>
+                    <fieldset class="counter__column">
+                      <button class="dec">
+                        -
+                      </button>
+                      <input class="num" type="number" value="0" readonly>
+                      <button class="inc">
+                        +
+                      </button>
+                    </fieldset>
+                  </div>
+                  <div class="counter__row">
+                    <div class="counter__column counter__column--title">кровати</div>
+                    <div class="counter__column">
+                      <button class="dec">
+                        -
+                      </button>
+                      <input class="num" type="number" value="0" readonly>
+                      <button class="inc">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div class="counter__row">
+                    <div class="counter__column counter__column--title">ванные комнаты</div>
+                    <div class="counter__column">
+                      <button class="dec">
+                        -
+                      </button>
+                      <input class="num" type="number" value="0" readonly>
+                      <button class="inc">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div class="counter__row">
+                    <div class="counter__column">
+                      <button type="button" class="button-activity button-activity__cleanup">очистить</button>
+                    </div>
+                    <div class="counter__column">
+                      <button type="button" class="button-activity button-activity__apply">применить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form-filter__item">
+              <div class="dropdown-list">
+                <legend class="subtitle">дополнительные удобства</legend>
+                <span class="material-icons dropdown-list__icons">expand_more</span>
+              </div>
+              <div class="checkbox hidden">
+                <ul class="checkbox__list list-reset">
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="smoking">
+                      <span class="checkbox-button__indicator"></span>
+                      Завтрак
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="pets" checked>
+                      <span class="checkbox-button__indicator"></span>
+                      Письменный стол
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="invite" checked>
+                      <span class="checkbox-button__indicator"></span>
+                      Стул для кормления
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="invite" checked>
+                      <span class="checkbox-button__indicator"></span>
+                      Кроватка
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="invite">
+                      <span class="checkbox-button__indicator"></span>
+                      Телевизор
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox-button">
+                      <input class="visually-hidden" type="checkbox" name="invite">
+                      <span class="checkbox-button__indicator"></span>
+                      Шампунь
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <section class="catalog">
+          <h1 class="main-title catalog__title">Номера, которые мы для вас подобрали</h1>
+          <div class="catalog__wrapper">
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/888_apt.jpg",
+              "img_alt": "Фото номера 888",
+              "number_apt": "№ 888",
+              "lux": "люкс",
+              "price": "9 990",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star",
+              "reviews": "145"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/840_apt.jpg",
+              "img_alt": "Фото номера 840",
+              "number_apt": "№ 840",
+              "lux": "",
+              "price": "9 900",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star_border",
+              "reviews": "65"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/980_apt.jpg",
+              "img_alt": "Фото номера 980",
+              "number_apt": "№ 980",
+              "lux": "люкс",
+              "price": "8 500",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star_border",
+              "star-5": "star_border",
+              "reviews": "35"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/856_apt.jpg",
+              "img_alt": "Фото номера 856",
+              "number_apt": "№ 856",
+              "lux": "",
+              "price": "7 300",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star",
+              "reviews": "19"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/740_apt.jpg",
+              "img_alt": "Фото номера 740",
+              "number_apt": "№ 740",
+              "lux": "",
+              "price": "6 000",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star_border",
+              "reviews": "44"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/982_apt.jpg",
+              "img_alt": "Фото номера 982",
+              "number_apt": "№ 982",
+              "lux": "",
+              "price": "5 800",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star_border",
+              "star-5": "star_border",
+              "reviews": "56"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/678_apt.jpg",
+              "img_alt": "Фото номера 678",
+              "number_apt": "№ 678",
+              "lux": "",
+              "price": "5 500",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star",
+              "reviews": "45"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/450_apt.jpg",
+              "img_alt": "Фото номера 450",
+              "number_apt": "№ 450",
+              "lux": "",
+              "price": "5 300",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star_border",
+              "reviews": "39"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/350_apt.jpg",
+              "img_alt": "Фото номера 350",
+              "number_apt": "№ 350",
+              "lux": "",
+              "price": "5 000",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star_border",
+              "star-5": "star_border",
+              "reviews": "77"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/666_apt.jpg",
+              "img_alt": "Фото номера 666",
+              "number_apt": "№ 666",
+              "lux": "",
+              "price": "5 000",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star",
+              "star-5": "star",
+              "reviews": "25"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/444_apt.jpg",
+              "img_alt": "Фото номера 444",
+              "number_apt": "№ 444",
+              "lux": "",
+              "price": "5 000",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star_border",
+              "star-5": "star_border",
+              "reviews": "15"
+            })
+            @@include('x_html/content/components/apt-card.html', {
+              "img_link": "@img/content/img-apartment/352_apt.jpg",
+              "img_alt": "Фото номера 352",
+              "number_apt": "№ 352",
+              "lux": "",
+              "price": "5 000",
+              "star-1": "star",
+              "star-2": "star",
+              "star-3": "star",
+              "star-4": "star_border",
+              "star-5": "star_border",
+              "reviews": "55"
+            })
+          </div>
+          <div class="pagination catalog__pagination">
+            
+            <ul class="pagination__list list-reset">
+              <li class="pagination__item"><a href="" class="pagination__link pagination__link--current">1</a></li>
+              <li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+              <li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="" class="pagination__link">...</a></li>
+              <li class="pagination__item"><a href="" class="pagination__link">15</a></li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link pagination__button">
+                  <span class="material-icons">arrow_forward</span>
+                </a>
+              </li>
+            </ul>
+            <p class="pagination__text">1 – 12 из 100+ вариантов аренды</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include('x_html/footer.html')
+  </div>
+  <script src="js/app.min.js"></script>
+  <script src="js/catalog.min.js"></script>
+  <script src="js/range_bar.js"></script>
+</body>
+</html>

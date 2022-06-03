@@ -1,0 +1,22 @@
+.room-rules__item {
+  position: relative;
+  padding-left: 21px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+  font-size: $fontSizeMain + px;
+  line-height: calc(24 / $fontSizeMain);
+  
+  color: $dark_shade_75;
+
+  &::before {
+    position: absolute;
+    content: '';
+    
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 7px;
+    background: $dark_shade_25;
+    border-radius: 50%;
+  }
+}

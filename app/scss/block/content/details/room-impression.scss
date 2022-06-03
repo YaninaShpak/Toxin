@@ -1,0 +1,44 @@
+.room-impression__wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.room-impression__list {
+  margin-left: 30px;
+}
+
+.room-impression__item {
+  position: relative;
+  font-size: $fontSizeMain + px;
+  line-height: calc(24 / $fontSizeMain);
+  padding-left: 15px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    border-radius: 50%;
+  }
+
+  &--great::before {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+
+  &--good::before {
+    background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+  }
+
+  &--passable::before {
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+  }
+
+  &--dissatisfied::before {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  }
+}

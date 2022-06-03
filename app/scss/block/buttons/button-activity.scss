@@ -1,0 +1,15 @@
+.button-activity {
+  font-family: $fontFamily;
+  font-size: 12px;
+  font-weight: 700;
+  color: $purple;
+  line-height: calc(15 / 12);
+  text-transform: uppercase;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.counter .button-activity__cleanup {
+  display: none;
+}

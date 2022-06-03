@@ -1,0 +1,23 @@
+.footer-bottom {
+  padding: 24px 0;
+
+  border-top: 1px solid #d1d1d4;
+
+  @media (max-width: $tabletWidth) {
+    padding-top: 0;
+    padding-bottom: 120px;
+
+    border: none;
+  }
+}
+
+.footer-bottom__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tabletWidth) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

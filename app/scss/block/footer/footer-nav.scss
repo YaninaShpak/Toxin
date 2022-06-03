@@ -1,0 +1,25 @@
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  @include adaptiv-value(gap, 40, 10, 0);
+
+  @media (max-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.footer-nav__title {
+  margin-bottom: 20px;
+  
+  text-transform: uppercase;
+}
+
+.footer-nav__item {
+  margin-bottom: 20px;
+}
+
+.footer-nav__link {
+  line-height: calc(17 / $fontSizeMain);
+  @include link ($dark_shade_50, $dark_shade_50, $dark_shade, $dark_shade, $dark_shade);
+}

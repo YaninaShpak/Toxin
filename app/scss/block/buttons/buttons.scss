@@ -1,0 +1,56 @@
+.button {
+  display: inline-block;
+  padding: #{calc(10 / 12) + em} #{calc(20 / 12) + em};
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: calc(15 / 12);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+
+  background: linear-gradient($purple, #8BA4F9);
+  border-radius: #{calc(22 / 12) + em};
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $burgerWidth) {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.button-border {
+  display: flex;
+  align-items: center;
+    
+  padding: #{calc(6.5 / 12) + em} #{calc(17.5 / 12) + em};
+
+  color: $purple;
+
+  background-origin: border-box;
+  border: 3px solid transparent;
+  box-shadow: inset 100px 100px 0 0 #fff;
+
+  @media (max-width: $burgerWidth) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.button-form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+
+  &__icon {
+    position: absolute;
+    right: 4%;
+  }
+}
+

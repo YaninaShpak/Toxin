@@ -1,0 +1,71 @@
+.form-price {
+  margin-top: 20.5px;
+}
+
+.form-price table {
+  width: 100%;
+
+  font-size: $fontSizeMain + px;
+  line-height: calc(18 / $fontSizeMain);
+
+  border-collapse: collapse;
+}
+
+.form-price td {
+  position: relative;
+
+  padding-right: 3px;
+  padding-bottom: 15px;
+
+  &:last-of-type {
+    min-width: 80px;
+
+    text-align: right;
+  }
+}
+
+.form-price tr:last-child td {
+  padding-bottom: 0;
+  
+  font-weight: 700;
+  font-size: 19px;
+  line-height: calc(23 / 19);
+  color: $dark_shade;
+}
+
+.price-table__column {
+  &--total {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 65px;
+
+      width: 75%;
+      height: 1px;
+     
+      border-bottom: 1px dashed $dark_shade_25;
+    }
+  }
+}
+
+.price-table__info {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  color: $dark_shade_25;
+  
+  border: 1px solid $dark_shade_25;
+  border-radius: 50%;
+  cursor: default;
+}

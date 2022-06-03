@@ -1,0 +1,21 @@
+.range-slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.range-slider__price {
+  color: $dark_shade_50;
+  font-weight: 400;
+}
+
+.range-slider__bar {
+  margin-bottom: 10.5px;
+  
+}
+
+.range-slider__info {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: $dark_shade_50;
+}

@@ -1,0 +1,86 @@
+// Modules
+@use "sass:math";
+
+//Global
+@import 'mixins';
+@import 'variables';
+@import 'fonts';
+@import 'global';
+
+// Buttons
+@import 'block/buttons/buttons.scss';
+@import 'block/buttons/button-activity.scss';
+@import 'block/buttons/toggle.scss';
+@import 'block/buttons/radio-button.scss';
+
+// Title
+@import 'block/titles/title.scss';
+
+//Header
+@import 'block/header/main-header.scss';
+@import 'block/header/main-nav.scss';
+@import 'block/header/site-nav.scss';
+@import 'block/header/user-nav.scss';
+@import 'block/header/user-login.scss';
+@import 'block/header/user-list.scss';
+
+//Content
+@import 'block/content/content.scss';
+
+  //Catalog
+
+@import 'block/content/catalog/catalog-content.scss';
+@import 'block/content/catalog/pagination.scss';
+@import 'block/content/catalog/catalog.scss';
+
+@import 'block/content/catalog/apt-card/apt-card.scss';
+@import 'block/content/catalog/apt-card/slider-toggle.scss';
+
+@import 'block/content/catalog/filter/filter.scss';
+
+  @import 'block/content/catalog/filter/filter-form.scss';
+  @import 'block/content/catalog/filter/range-slider.scss';
+  @import 'block/content/catalog/filter/range-controls.scss';
+  @import 'block/content/catalog/filter/checkbox.scss';
+  @import 'block/content/catalog/filter/checkbox-button.scss';
+  @import 'block/content/catalog/filter/dropdown-list.scss';
+  @import 'block/content/catalog/filter/basic-info.scss';
+
+  
+
+  //Forms
+  @import 'block/content/forms/form.scss';
+
+  @import 'block/content/forms/search-form.scss';
+  @import 'block/content/forms/subscription-form.scss';
+  @import 'block/content/forms/signin-form.scss';
+  @import 'block/content/forms/login-form.scss';
+
+  @import 'block/content/forms/components-form/inputs/input.scss';
+  @import 'block/content/forms/components-form/inputs/input-dropdown.scss';
+  @import 'block/content/forms/components-form/form-back.scss';
+
+  @import 'block/content/forms/components-form/calendar.scss';
+  @import 'block/content/forms/components-form/counter.scss';
+
+  // Details-apt
+  @import 'block/content/details/impression-circle.scss';
+  @import 'block/content/details/review.scss';
+  @import 'block/content/details/room-content.scss';
+  @import 'block/content/details/room-details.scss';
+  @import 'block/content/details/room-gallery.scss';
+  @import 'block/content/details/room-impression.scss';
+  @import 'block/content/details/room-info.scss';
+  @import 'block/content/details/room-reviews.scss';
+  @import 'block/content/details/room-rules.scss';
+  @import 'block/content/details/form-price.scss';
+
+// Footer
+@import 'block/footer/main-footer.scss';
+@import 'block/footer/footer-body.scss';
+@import 'block/footer/footer-info.scss';
+@import 'block/footer/footer-nav.scss';
+@import 'block/footer/footer-form.scss';
+@import 'block/footer/footer-bottom.scss';
+@import 'block/footer/copyrighting.scss';
+@import 'block/footer/social-list.scss';

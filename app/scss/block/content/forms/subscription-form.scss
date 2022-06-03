@@ -1,0 +1,25 @@
+.subscription__wrapper {
+  position: relative;
+}
+
+.subscription .subscription__input {
+  padding-right: 44px;
+}
+
+.subscription__wrapper .subscription__icons {
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  width: 42px;
+  height: 42px;
+  
+  color: $purple;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

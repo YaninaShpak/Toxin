@@ -1,0 +1,15 @@
+.user-nav {
+  display: flex;
+
+  @media (max-width: $burgerWidth) {
+    width: 100%;
+  }
+  
+}
+
+.user-nav__list {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}

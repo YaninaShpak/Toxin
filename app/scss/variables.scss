@@ -1,0 +1,20 @@
+// Ширина контейнера
+$maxWidth: 1440;
+$maxWidthContainer: 1190;
+
+$mobileOnly: 640px;
+$tabletWidth: 768px;
+$burgerWidth: 845px;
+
+// Цвета
+$dark_shade: #1f2041;
+$dark_shade_75: rgba($dark_shade, 75%);
+$dark_shade_50: rgba($dark_shade, 50%);
+$dark_shade_25: rgba($dark_shade, 25%);
+$dark_shade_5: rgba($dark_shade, 5%);
+$purple: #bc9cff;
+$green: #6fcf97;
+
+// Шрифты
+$fontFamily: Montserrat;
+$fontSizeMain: 14;

@@ -1,0 +1,22 @@
+.room-reviews {
+  grid-column: span 2;
+}
+
+.room-reviews__item {
+  margin-bottom: 22px;
+}
+
+.room-reviews__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.room-reviews__count {
+  font-weight: 400;
+  font-size: $fontSizeMain + px;
+  line-height: 1;
+  text-align: right;
+  color: $dark_shade_50;
+}
+

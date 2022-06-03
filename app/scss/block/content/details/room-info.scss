@@ -1,0 +1,25 @@
+
+.room-info__item {
+  position: relative;
+  padding-left: 58px;
+  
+  font-size: $fontSizeMain + px;
+  line-height: calc(24 / $fontSizeMain);
+}
+
+.room-info__item:not(:last-child) {
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+
+.room-info .room-info__icon {
+  position: absolute;
+  left: 0;
+  font-size: 48px;
+  color: $purple;
+}
+
+.room-info__title {
+  font-weight: bold;
+}

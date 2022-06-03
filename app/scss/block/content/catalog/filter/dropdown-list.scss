@@ -1,0 +1,11 @@
+.dropdown-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+.dropdown-list__icons {
+  margin-right: 9px;
+}

@@ -1,0 +1,33 @@
+.checkbox-button {
+  position: relative;
+
+  display: flex;
+
+  padding-left: 30px;
+
+  color: $dark_shade_50;
+}
+
+.checkbox-button__indicator {
+  content: '';
+
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include square(20px, 1px, $dark_shade_25, $bg-color: false);
+  border-radius: 4px;
+}
+
+.checkbox-button input:checked+.checkbox-button__indicator {
+  border-color: $purple;
+}
+
+.checkbox-button input:checked+.checkbox-button__indicator::before {
+  content: url('../../../../../img/icons/checked-icon.svg');
+
+  position: absolute;
+}

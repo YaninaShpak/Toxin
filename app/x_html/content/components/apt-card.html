@@ -1,0 +1,50 @@
+<div class="apt-card">
+  <div class="apt-card__slider">
+    <img class="apt-card__img" src=@@img_link alt=@@img_alt>
+    <div class="slider-toggle apt-card__toggle">
+      <ul class="slider-toggle__list list-reset">
+        <li class="slider-toggle__item">
+        <a class="slider-toggle__link slider-toggle__link--current" href="#">
+          <span class="visually-hidden">Текущая фотография номера</span>
+        </a>
+        </li>
+        <li class="slider-toggle__item">
+        <a class="slider-toggle__link" href="#"><span class="visually-hidden">Вторая фотография номера</span></a>
+        </li>
+        <li class="slider-toggle__item">
+        <a class="slider-toggle__link" href="#"><span class="visually-hidden">Третья фотография номера</span></a>
+        </li>
+        <li class="slider-toggle__item">
+        <a class="slider-toggle__link" href="#"><span class="visually-hidden">Последняя фотография номера</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="apt-card__wrapper">
+    <div class="apt-card__info">
+      <p class="apt-card__number">
+        <a class="apt-card__link apt-card__link--info" href="appartment-details.html">@@number_apt</a>
+        <span class="apt-card__lux">@@lux</span>
+      </p>
+      <p class="apt-card__price">
+        <span>@@price ₽</span>
+        в сутки
+      </p>
+    </div>
+    <div class="apt-card__reviews">
+      <p class="apt-card__rating">
+        <span class="material-icons apt-card__star">@@star-1</span>
+        <span class="material-icons apt-card__star">@@star-2</span>
+        <span class="material-icons apt-card__star">@@star-3</span>
+        <span class="material-icons apt-card__star">@@star-4</span>
+        <span class="material-icons apt-card__star">@@star-5</span>
+      </p>
+      <p class="apt-card__ammount-reviews">
+        <a class="apt-card__link apt-card__link--reviews" href="">
+          <span>@@reviews</span>
+          Отзывов
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

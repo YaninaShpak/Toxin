@@ -1,0 +1,29 @@
+// H1
+.main-title {
+  font-family: $fontFamily;
+  font-weight: 700;
+  @include adaptiv-font(24, 16);
+  line-height: calc(29 / 24);
+  color: $dark_shade;
+}
+
+// H2
+
+.title {
+  font-family: $fontFamily;
+  font-weight: 700;
+  @include adaptiv-font(19, 16);
+  line-height: calc(23 / 19);
+  color: $dark_shade;
+}
+
+// H3
+
+.subtitle {
+  font-family: $fontFamily;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  color: $dark_shade;
+  text-transform: uppercase;
+}

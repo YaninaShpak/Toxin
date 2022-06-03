@@ -1,0 +1,74 @@
+.review__autor,
+.review__info,
+.review__like {
+  display: flex;
+  align-items: center;
+}
+
+.review__autor {
+  margin-bottom: 10px;
+}
+
+.review__avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border-radius: 32px;
+  }
+}
+
+.review__autor-info {
+  
+  font-size: $fontSizeMain + px;
+  line-height: calc(24 / $fontSizeMain);
+}
+
+.review__autor-name {
+  font-weight: 700;
+}
+
+.review__wrapper {
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.review__like .material-icons {
+  font-size: 10px;
+  color: $dark_shade_25;
+}
+
+.review__like {
+  padding: 3px 10px 3px 4px;
+  border: 1px solid $dark_shade_25;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  &--favorite {
+    border-color: $purple;
+
+    .material-icons,
+    .review__like-count {
+      color: $purple;
+    }
+  }
+}
+
+.review__like-count {
+  font-size: 10px;
+  line-height: calc(12 / 10);
+  
+  color: $dark_shade_25;
+  margin-left: 5px;
+}
+
+.review__text {
+  margin-left: 10px;
+}

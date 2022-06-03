@@ -1,0 +1,35 @@
+.search-apt {
+  position: relative;
+  margin-top: 140px;
+}
+
+.search-apt__title {
+  padding-right: 40px;
+  margin-bottom: 20px;
+}
+
+.search-apt__calendar {
+  top: 190px;
+}
+
+.form-search__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  column-gap: 20px;
+}
+
+.form-search label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-search__button {
+  margin-top: 30px;
+ 
+} 
+
+.form-search____calendar {
+  top: 70px;
+}

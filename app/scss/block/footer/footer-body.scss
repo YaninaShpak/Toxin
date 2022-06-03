@@ -1,0 +1,21 @@
+.footer-body {
+  display: flex; 
+  @include adaptiv-value(gap, 40, 10, 0);
+  @include adaptiv-value(padding-top, 100, 20, 0);
+  @include adaptiv-value(padding-bottom, 100, 20, 0);
+
+  @media (max-width: $tabletWidth) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+}
+
+.footer-info,
+.footer-form {
+  width: prc(260, $maxWidthContainer);
+}
+

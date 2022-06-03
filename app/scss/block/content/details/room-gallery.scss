@@ -1,0 +1,19 @@
+.room-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 70px;
+}
+
+.room-gallery__photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.room-gallery__photo--current {
+  grid-row: span 2;
+  grid-column: span 2;
+  
+}
+

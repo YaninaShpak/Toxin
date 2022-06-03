@@ -1,0 +1,30 @@
+.radio-button {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.radio-button__indicator {
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include circle(20px, 1px, $dark_shade_25, $bg-color: false);
+}
+
+.radio-button input:checked+.radio-button__indicator {
+  border-color: $purple;
+}
+
+.radio-button input:checked+.radio-button__indicator::after {
+  content: '';
+
+  position: absolute;
+    
+  @include circle(12px, 0, none, $purple);
+}
