@@ -7,7 +7,7 @@ $withToggle: 40px;
     position: absolute;
     top: $paddingTopHeader;
     right: 20px;
-    z-index: 33;
+    z-index: 4;
     
     display: block;
     
@@ -84,7 +84,7 @@ $withToggle: 40px;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 32;
+    z-index: 2;
 
     flex-direction: column;
     align-items: flex-start;

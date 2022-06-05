@@ -20,4 +20,11 @@ let counterTitleComfort = comfortBlock.querySelectorAll('.counter__column--title
 showCounter(buttonDropdownCounterComfort, counterComfort);
 counted(numContainerComfort, btnIncComfort, btnDecComfort, btnSumCounterComfort, btnResetCounterComfort, inputAmountComfort, 1, counterTitleComfort);
 
+// открыть/закрыть фильтр
+import { showFilter, closeFilter } from './modules/filter.js';
+showFilter();
+closeFilter();
+
+
+
 

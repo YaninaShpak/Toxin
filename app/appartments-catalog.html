@@ -4,16 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Выбрать номер в отеле Toxin</title>
+  <title>Выбор номера в отеле Toxin</title>
   @@include('x_html/head-link.html')
 </head>
 <body>
   <div class="wrapper">
     @@include('x_html/header.html')
     <main class="catalog-content">
+      
       <div class="container catalog-content__wrapper">
-        <section class="filter">
+        <button type="button" class="button catalog-content__button">
+          <span class="material-icons">sort</span>
+          фильтры
+        </button>
+        <section class="filter catalog-content__filter hidden">
           <form class="form-filter filter__form" action="" method="get">
+            <div class="filter__buttons">
+              <button type="reset" class="filter__button filter__button--reset">сбросить</button>
+              <button type="submit" class="filter__button filter__button--submit">применить</button>
+              <button type="button" class="filter__button filter__button--close">закрыть</button>
+            </div>
+            
             <fieldset class="form-filter__item basic-info">
               <legend class="visually-hidden">основная информация</legend>
               <div class="basic-info__item basic-info__item--calendar">

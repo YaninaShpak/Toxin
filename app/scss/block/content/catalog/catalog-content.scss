@@ -4,7 +4,66 @@
 }
 
 .catalog-content__wrapper {
+  
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 100px;
+
+ 
+}
+
+.catalog-content__button {
+  position: fixed;
+  top: 90vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+
+  @media(max-width: $mobileMin) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px 50px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+}
+
+.catalog-content__button.hidden {
+  display: none
+}
+
+.catalog-content__filter {
+
+  @include adaptiv-value(width, 266, 180, 0);
+  flex-shrink: 0;
+  @include adaptiv-value(margin-right, 60, 20, 0);
+
+  @media(max-width: $mobileMin) {
+    box-sizing: content-box;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    top: 70px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    background-color: #fff;
+  }
+}
+
+.catalog-content__filter.hidden {
+  @media(max-width: $mobileMin) {
+    display: none;
+  }
+  
 }

@@ -1,6 +1,10 @@
 .search-apt {
   position: relative;
+
   margin-top: 140px;
+  @media(max-width: $mobileOnly) {
+    align-self: center;
+  }
 }
 
 .search-apt__title {

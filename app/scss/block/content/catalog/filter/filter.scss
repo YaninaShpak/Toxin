@@ -1,19 +1,36 @@
-.filter {
-  @include adaptiv-value(width, 266, 150, 0);
-  @include adaptiv-value(margin-right, 60, 20, 0);
+.filter__buttons {
+  display: none;
 
-  // @media (max-width: 770px) {
-  //   min-width: 100px;
-  //   margin-right: 0;
-  //   background-color: #fff;
-  //   border: 1px solid rgb(61, 61, 61);
-  // }
+  @media(max-width: $mobileMin) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
 }
 
-// .filter__form {
-//   @media (max-width: 770px) {
-//     display: none;
-//   }
-  
-// }
+.filter__button {
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--reset {
+    background-color: $purple;
+  }
+
+  &--submit {
+    background-color: $green;
+  }
+
+  &--close {
+    background-color: $purple;
+  }
+}
