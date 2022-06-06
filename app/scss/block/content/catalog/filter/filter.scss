@@ -2,35 +2,43 @@
   display: none;
 
   @media(max-width: $mobileMin) {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 15px;
+
+    width: 100%;
+    padding: 15px;
+
+    background-color: #fff;
   }
 }
 
 .filter__button {
   padding: 10px 15px;
+
   font-weight: 700;
   font-size: 12px;
   line-height: calc(15 / 12);
   text-transform: uppercase;
   color: #fff;
-  background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
   }
 
-  &--reset {
+  &--reset, 
+  &--close {
     background-color: $purple;
   }
 
   &--submit {
     background-color: $green;
-  }
-
-  &--close {
-    background-color: $purple;
   }
 }

@@ -10,14 +10,6 @@
   overflow: hidden;
 }
 
-// .impression-circle::before {
-//   content: '';
-//   position: absolute;
-//   width: 112px;
-//   height: 112px;
-  
-// }
-
 .impression-circle__text {
   position: relative;
   color: $purple;
@@ -28,7 +20,7 @@
   width: 112px;
   height: 112px;
   background-color: #fff;
-  z-index: 33;
+  z-index: 1;
   overflow: hidden;
   border-radius: 50%;
 
@@ -45,7 +37,6 @@
     width: 48%;
     height: 100%;
     left: 0;
-    z-index: 3;
     top: 0;
   }
 
@@ -55,7 +46,6 @@
     height: 49%;
     right: 0;
     bottom: 0;
-    z-index: 1;
   }
 
   &--passable {
@@ -64,6 +54,5 @@
     width: 50%;
     right: 0;
     top: 0;
-    z-index: 2;
   }
 }

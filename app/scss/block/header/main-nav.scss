@@ -48,7 +48,6 @@ $withToggle: 40px;
     content: "";
     position: absolute;
     @include adaptiv-value("top", 20, 15, 0);
-    // top: 0;
     left: 5px;
     z-index: 3;
 
@@ -84,7 +83,7 @@ $withToggle: 40px;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
 
     flex-direction: column;
     align-items: flex-start;
@@ -113,7 +112,7 @@ $withToggle: 40px;
   @media (max-width: $burgerWidth) {
     flex-direction: column;
     align-items: flex-start;
-    z-index: 32;
+    z-index: 4;
 
     margin-bottom: 60px;
   }

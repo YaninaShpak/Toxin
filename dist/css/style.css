@@ -469,15 +469,15 @@ body .material-icons {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .catalog-content__button {
   position: fixed;
-  top: 90vh;
+  top: 80vh;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 1;
   display: none;
 }
 
@@ -692,23 +692,20 @@ body .material-icons {
   line-height: 1.25;
   text-transform: uppercase;
   color: #fff;
-  background-color: transparent;
+  cursor: pointer;
 }
 
 .filter__button:hover {
   opacity: 0.5;
 }
 
-.filter__button--reset {
+.filter__button--reset,
+.filter__button--close {
   background-color: #bc9cff;
 }
 
 .filter__button--submit {
   background-color: #6fcf97;
-}
-
-.filter__button--close {
-  background-color: #bc9cff;
 }
 
 .form-filter__item {
@@ -1058,7 +1055,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .input-dropdown__wrapper {
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1287,7 +1283,7 @@ input.num {
   width: 112px;
   height: 112px;
   background-color: #fff;
-  z-index: 33;
+  z-index: 1;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -1305,7 +1301,6 @@ input.num {
   width: 48%;
   height: 100%;
   left: 0;
-  z-index: 3;
   top: 0;
 }
 
@@ -1315,7 +1310,6 @@ input.num {
   height: 49%;
   right: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .impression-circle__piece--passable {
@@ -1324,7 +1318,6 @@ input.num {
   width: 50%;
   right: 0;
   top: 0;
-  z-index: 2;
 }
 
 .review__autor,
@@ -1759,7 +1752,7 @@ input.num {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -1776,7 +1769,7 @@ input.num {
   .main-nav__list {
     flex-direction: column;
     align-items: flex-start;
-    z-index: 32;
+    z-index: 4;
     margin-bottom: 60px;
   }
 
@@ -1906,20 +1899,12 @@ input.num {
   }
 
   .catalog-content__filter {
-    box-sizing: content-box;
-    position: absolute;
-    z-index: 1;
-    width: 90%;
-    top: 70px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: #fff;
+    display: block;
+    width: 100%;
   }
 
-  .catalog-content__filter.hidden {
+  .catalog-content__filter.hidden,
+  .catalog-content__cards.hidden {
     display: none;
   }
 
@@ -1933,10 +1918,17 @@ input.num {
   }
 
   .filter__buttons {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 15px;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
   }
 }
 

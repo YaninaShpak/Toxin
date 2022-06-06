@@ -1,24 +1,25 @@
 .catalog-content {
   padding-bottom: 70px;
+  
   border-bottom: 1px solid #B4B4BC;
 }
 
 .catalog-content__wrapper {
-  
   position: relative;
+
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
 
- 
+  padding-top: 120px;
 }
 
 .catalog-content__button {
   position: fixed;
-  top: 90vh;
+  top: 80vh;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 1;
+
   display: none;
 
   @media(max-width: $mobileMin) {
@@ -46,24 +47,14 @@
   @include adaptiv-value(margin-right, 60, 20, 0);
 
   @media(max-width: $mobileMin) {
-    box-sizing: content-box;
-    position: absolute;
-    z-index: 1;
-    width: 90%;
-    top: 70px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    background-color: #fff;
+    display: block;
+    width: 100%;
   }
 }
 
-.catalog-content__filter.hidden {
+.catalog-content__filter.hidden,
+.catalog-content__cards.hidden {
   @media(max-width: $mobileMin) {
     display: none;
   }
-  
 }
