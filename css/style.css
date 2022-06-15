@@ -112,6 +112,7 @@ body .material-icons {
   background: linear-gradient(#bc9cff, #8BA4F9);
   border-radius: 1.8333333333em;
   cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 .button:hover {
@@ -932,7 +933,7 @@ input[type=range]::-ms-thumb {
 }
 
 .search-apt__calendar {
-  top: 190px;
+  top: calc(177px + 13 * ((100vw - 320px) / 1120));
 }
 
 .form-search__wrapper {
@@ -1069,7 +1070,7 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
