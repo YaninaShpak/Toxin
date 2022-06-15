@@ -1,6 +1,7 @@
 // счетчик количество гостей
 export const showCounter = (btnCount, counter) => {
   btnCount.addEventListener('click', (e) => {
+    e.stopPropagation();
     e.preventDefault();
     counter.classList.toggle('hidden');
   }) 

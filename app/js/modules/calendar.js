@@ -7,6 +7,7 @@ let btnResetCalendar = calendar.querySelector('.button-activity__cleanup--calend
 export const showCalendar = () => {
   buttonDropdown.forEach((value) => {
     value.addEventListener('click', (e) => {
+      e.stopPropagation();
       e.preventDefault();
       calendar.classList.toggle('hidden');
     });
@@ -213,6 +214,17 @@ export const createCalendar = function(type = 0) {
 export const closeCalendar = function () {
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Escape' && !calendar.classList.contains('hidden')) {
+      calendar.classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    let its_calendar = e.target == calendar || calendar.contains(e.target);
+    
+    if (!its_calendar &&
+      e.target !== buttonDropdown[0] &&
+      e.target !== buttonDropdown[1] &&
+      !calendar.classList.contains('hidden')) {
       calendar.classList.add('hidden');
     }
   });
