@@ -13,6 +13,8 @@ export const showCalendar = () => {
   });
 }
 
+
+
 let now = new Date();
 let currentMonth = now.getMonth();
 let currentYear = now.getFullYear();
@@ -206,4 +208,12 @@ export const createCalendar = function(type = 0) {
     
   });
   
+}
+
+export const closeCalendar = function () {
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape' && !calendar.classList.contains('hidden')) {
+      calendar.classList.add('hidden');
+    }
+  });
 }

@@ -1,5 +1,6 @@
 //календарь
-import { showCalendar, createCalendar } from './modules/calendar.js';
+import { showCalendar, createCalendar, closeCalendar } from './modules/calendar.js';
 
 showCalendar();
 createCalendar(0);
+closeCalendar();

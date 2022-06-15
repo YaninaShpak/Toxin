@@ -1,9 +1,10 @@
 
 //календарь
-import { showCalendar, createCalendar } from './modules/calendar.js';
+import { showCalendar, createCalendar, closeCalendar } from './modules/calendar.js';
 
 showCalendar();
 createCalendar(1);
+closeCalendar();
 
 import { showCounter, counted } from './modules/counter.js';
 let comfortBlock = document.querySelector('.filter-comfort');

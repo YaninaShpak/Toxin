@@ -65,6 +65,10 @@ const counted = function (numContainer, btnInc, btnDec, btnSumCounter, btnResetC
       inputAmount.value = `${numContainer[0].value} ${counterTitle[0].textContent}, ${numContainer[1].value} ${counterTitle[1].textContent}, ${numContainer[2].value} ${counterTitle[2].textContent}`;
       
     }
+
+    document.querySelectorAll('.counter').forEach(el => {
+      el.classList.add('hidden');
+    });
   });
 
   btnResetCounter.addEventListener('click', (e) => {

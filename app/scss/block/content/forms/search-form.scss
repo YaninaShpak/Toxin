@@ -13,7 +13,7 @@
 }
 
 .search-apt__calendar {
-  top: 190px;
+  @include adaptiv-value(top, 190, 177, 0);
 }
 
 .form-search__wrapper {
