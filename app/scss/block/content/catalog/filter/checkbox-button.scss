@@ -27,7 +27,7 @@
 }
 
 .checkbox-button input:checked+.checkbox-button__indicator::before {
-  content: url('../../../../../img/icons/checked-icon.svg');
+  content: url('../img/icons/checked-icon.svg');
 
   position: absolute;
 }

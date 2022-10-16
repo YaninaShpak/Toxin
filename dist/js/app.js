@@ -24,3 +24,8 @@ showCounter(buttonDropdownCounterGuests, counterGuests);
 
 counted(numContainerGuests, btnIncGuests, btnDecGuests, btnSumCounterGuests, btnResetCounterGuests, inputAmountGuests, 0, counterTitleGuests);
 setTextInput();
+
+import { imask } from './modules/imask.js';
+import { createMasks } from './modules/input-mask.js';
+imask();
+createMasks();

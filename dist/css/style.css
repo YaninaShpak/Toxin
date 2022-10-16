@@ -1889,6 +1889,10 @@ input.num {
     flex-direction: column;
     align-items: center;
   }
+
+  .room-gallery {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {

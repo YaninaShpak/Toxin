@@ -8,7 +8,7 @@
             Прибытие
           </label>
           <div class="input-dropdown__wrapper">
-            <input class="input input-dropdown" type="text" name="date-in" id="date-in" placeholder="ДД.ММ.ГГГГ">
+            <input class="input input-dropdown" type="text" name="date-in" id="date-in" placeholder="ДД.ММ.ГГГГ" data-mask="date" >
             <span class="material-icons input-dropdown__icons button-dropdown--calendar">expand_more</span>
           </div>
         </div>
@@ -17,7 +17,7 @@
             Выезд
           </label>
           <div class="input-dropdown__wrapper">
-            <input class="input input-dropdown" type="text" name="date-out" id="date-out" placeholder="ДД.ММ.ГГГГ">
+            <input class="input input-dropdown" type="text" name="date-out" id="date-out" placeholder="ДД.ММ.ГГГГ" data-mask="date" >
             <span class="material-icons input-dropdown__icons button-dropdown--calendar">expand_more</span>
           </div>
         </div>
@@ -27,13 +27,13 @@
           Гости
         </label>
         <div class="input-dropdown__wrapper input-guests">
-          <input class="input" type="text" name="guests" id="guests"  value="" placeholder="Сколько гостей">
+          <input class="input" type="text" name="guests" id="guests"  value="" placeholder="Сколько гостей" data-mask="guests">
           <span class="material-icons input-dropdown__icons button-dropdown--counter">expand_more</span>
         </div>
         
         @@include('../components/counter.html', {"class": "input-guests__list"})
       </div>
-      <a class="button button-form form-search__button" href="appartments-catalog.html">
+      <a class="button button-form form-search__button" href="apartments-catalog.html">
         Подобрать номер
         <span class="material-icons button-form__icon">arrow_forward</span>
       </a>
